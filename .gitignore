@@ -164,3 +164,4 @@ cython_debug/
 #Ignorando archivo del proyecto
 
 .terraform
+nginx-server.key

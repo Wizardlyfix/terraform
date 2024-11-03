@@ -26,6 +26,15 @@ resource "aws_instance" "nginx-server" {
   key_name = aws_key_pair.nginx-server-ssh.key_name  #conectar el recurso aws_key_pair con esta instancia
   #Asignar el Secutiry Group a la instancia
   vpc_security_group_ids = [aws_security_group.nginx-server-sg.id] #La propiedad id está importada en terraform y no importa
+
+  #Agregar los tags
+  tags = {
+    Name = "nginx-server"
+    Environment = "test"
+    Owner = "wizardlyfix@outlook.es"
+    Team = "Entrevista"
+    Project = "Tarea"
+  }
 }
 
 # Recurso de la clave ssh en aws "aws_key_pair"
@@ -34,6 +43,14 @@ resource "aws_instance" "nginx-server" {
 resource "aws_key_pair" "nginx-server-ssh" {
   key_name = "nginx-server-ssh"
   public_key = file("nginx-server.key.pub")
+
+  tags = {
+    Name = "nginx-server-ssh"
+    Environment = "test"
+    Owner = "wizardlyfix@outlook.es"
+    Team = "Entrevista"
+    Project = "Tarea"
+  }
 }
 
 # Recurso del Security Group
@@ -60,5 +77,13 @@ resource "aws_security_group" "nginx-server-sg" {
     to_port          = 0
     protocol         = "-1"
     cidr_blocks      = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "nginx-server-sg"
+    Environment = "test"
+    Owner = "wizardlyfix@outlook.es"
+    Team = "Entrevista"
+    Project = "Tarea"
   }
 }

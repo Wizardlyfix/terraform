@@ -163,10 +163,4 @@ cython_debug/
 
 #Ignorando archivo del proyecto
 
-MQTT_V2.txt
-mosquitto/config/pwfile
-homeassistant
-mosquitto.db
-telegraf
-telegraf.conf
-terraform/.terraform
+.terraform

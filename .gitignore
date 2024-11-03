@@ -164,6 +164,6 @@ cython_debug/
 #Ignorando archivo del proyecto
 
 .terraform
-terraform/nginx-server.key
-terraform/terraform.tfstate
-terraform/terraform.tfstate.backup
+nginx-server.key
+terraform.tfstate
+terraform.tfstate.backup

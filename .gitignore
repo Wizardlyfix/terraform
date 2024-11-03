@@ -167,3 +167,4 @@ cython_debug/
 nginx-server.key
 terraform.tfstate
 terraform.tfstate.backup
+nginx-server.key.pub

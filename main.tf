@@ -1,7 +1,18 @@
-# terraform init - Para inicializar un directorio de terraform
+# terraform init - Para inicializar un directorio de terraform - se comunica con los proveedores y configura el backend
 # terraform plan - Para generar un plan de ejecución
 # terraform apply - Para aplicar los cambios
 # terraform destroy - Para destruir los recursos
+
+
+####### Archivo de estado almacenado en S3 Bucket
+
+terraform {
+  backend "s3" {
+    bucket = "tfstate-work-1238fdf874"
+    key    = "terraform/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
 
 ####### Proveedor
 

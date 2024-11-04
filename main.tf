@@ -24,7 +24,7 @@ resource "aws_instance" "nginx-server" {
               EOF
   
   key_name = aws_key_pair.nginx-server-ssh.key_name  #conectar el recurso aws_key_pair con esta instancia
-  #Asignar el Secutiry Group a la instancia
+  #Asignar el Security Group a la instancia
   vpc_security_group_ids = [aws_security_group.nginx-server-sg.id] #La propiedad id está importada en terraform y no importa
 
   #Agregar los tags

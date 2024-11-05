@@ -116,3 +116,8 @@ output "server_public_dns" {
 #Para conectarse por SSH:
 
 # ssh ec2-user@52.90.248.59 -i ./nginx-server.key
+
+#Para generar la clave ssh:
+
+# ssh-keygen -t rsa -b 2048 -f "nginx-server.key"
+

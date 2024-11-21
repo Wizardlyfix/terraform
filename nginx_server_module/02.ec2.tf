@@ -18,11 +18,11 @@ resource "aws_instance" "nginx-server" {
     vpc_security_group_ids = [aws_security_group.nginx-server-sg.id] #La propiedad id está importada en terraform y no importa
 
     #Agregar los tags
-    tags = merge(local.standard_tags, {
-        Name        = var.server_name,
+    tags = {
+        Name        = var.server_name
         Environment = var.environment
-        # Owner = "wizardlyfix@outlook.es"
-        # Team = "Entrevista"
-        # Project = "Tarea"
-    })
+        Owner = "wizardlyfix@outlook.es"
+        Team = "Entrevista"
+        Project = "Tarea"
+    }
 }

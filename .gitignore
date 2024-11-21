@@ -165,7 +165,9 @@ cython_debug/
 
 .terraform
 nginx-server.key
+nginx-server-qa.key
 terraform.tfstate
 terraform.tfstate.backup
-nginx-server.key.pub
+nginx-server-dev.key.pub
+nginx-server-qa.key.pub
 .terraform.lock.hcl

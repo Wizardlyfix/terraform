@@ -24,11 +24,11 @@ resource "aws_security_group" "nginx-server-sg" {
         cidr_blocks = ["0.0.0.0/0"]
     }
 
-    tags = merge(local.standard_tags, {
-        Name        = var.server_name,
+    tags = {
+        Name        = var.server_name
         Environment = var.environment
-        # Owner = "wizardlyfix@outlook.es"
-        # Team = "Entrevista"
-        # Project = "Tarea"
-    })
+        Owner = "wizardlyfix@outlook.es"
+        Team = "Entrevista"
+        Project = "Tarea"
+    }
 }
